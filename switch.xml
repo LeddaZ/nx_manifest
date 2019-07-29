@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="gitlab" fetch="http://gitlab.com/" />
+  <remote name="nvtegra" fetch="git://nv-tegra.nvidia.com/" />
+  <remote name="cm-shield" fetch="https://gitlab.incom.co/CM-Shield/" revision="lineage-16.0" />
+  
+  <project name="switchroot/android/android_device_nvidia_foster" path="device/nvidia/foster" remote="gitlab" revision="lineage-15.1-switch" />
+  <project name="switchroot/android/android_device_nvidia_shield-common" path="device/nvidia/shield-common" remote="gitlab" revision="lineage-15.1-switch" />
+  <project name="switchroot/android/android_hardware_nvidia_power" path="hardware/nvidia/power" remote="gitlab" revision="lineage-15.1-switch" />
+  <project name="LineageOS/android_hardware_nvidia_libstagefrighthw" path="hardware/nvidia/libstagefrighthw" remote="github" />
+  <project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" remote="github" />
+
+  <project name="device/hardware/nvidia/soc/tegra" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/tegra" remote="nvtegra" revision="rel-30-r3"/>
+  <project name="device/hardware/nvidia/soc/t210" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/t210" remote="nvtegra" revision="rel-30-r3"/>
+  <project name="device/hardware/nvidia/platform/tegra/common" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/tegra/common" remote="nvtegra" revision="rel-30-r3"/>
+  <project name="device/hardware/nvidia/platform/t210/common" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/common" remote="nvtegra" revision="rel-30-r3"/>
+  <project name="switchroot/kernel/l4t-platform-t210-switch" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/switch" remote="gitlab" revision="rel-30-r3"/>
+  
+  <project name="linux-nvgpu" path="kernel/nvidia/linux-4.9/kernel/nvgpu" remote="nvtegra" revision="l4t/l4t-r32.1"/>
+  <project name="switchroot/kernel/l4t-kernel-4.9" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" remote="gitlab" revision="rel30-android"/>
+  <project name="switchroot/kernel/l4t-kernel-nvidia" path="kernel/nvidia/linux-4.9/kernel/nvidia" remote="gitlab" revision="rel32-android"/>
+  <project name="android_packages_inputmethods_NVLatinIME.git" path="packages/inputmethods/NVLatinIME" remote="cm-shield" revision="cm-13.0" />
+</manifest>

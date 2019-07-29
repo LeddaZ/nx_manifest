@@ -1,0 +1,46 @@
+diff --git a/shield/app/shieldtech.mk b/shield/app/shieldtech.mk
+index 6df36f4..d079620 100644
+--- a/shield/app/shieldtech.mk
++++ b/shield/app/shieldtech.mk
+@@ -17,8 +17,7 @@ ifeq ($(NV_ANDROID_FRAMEWORK_ENHANCEMENTS),TRUE)
+ # Apk
+ PRODUCT_PACKAGES += \
+                     NvCPLSvc \
+-                    NvShieldTech \
+-                    TegraZone_Next
++                    NvShieldTech
+ 
+ # Libs
+ PRODUCT_PACKAGES += \
+diff --git a/shield/foster-generated.mk b/shield/foster-generated.mk
+index 395b347..f78db88 100644
+--- a/shield/foster-generated.mk
++++ b/shield/foster-generated.mk
+@@ -47,7 +47,6 @@ PRODUCT_PACKAGES += \
+                     libnvfnet_32 \
+                     libnvfnetstorehdfx_32 \
+                     libnvfnetstoredefog_32 \
+-                    gatekeeper.tlk.tegra_32 \
+                     gralloc.tegra_32 \
+                     libnvblit_32 \
+                     libnvrm_gpu_32 \
+@@ -74,7 +73,6 @@ PRODUCT_PACKAGES += \
+                     libnvimp \
+                     libtlk_secure_hdcp_up \
+                     libtsechdcp \
+-                    gatekeeper.tlk.tegra \
+                     keystore.v0.tegra \
+                     keystore.v1.tegra \
+                     memtrack.tegra \
+diff --git a/shield/foster.mk b/shield/foster.mk
+index e3bbe7f..da313b8 100644
+--- a/shield/foster.mk
++++ b/shield/foster.mk
+@@ -16,7 +16,6 @@ $(call inherit-product, vendor/nvidia/shield/foster-generated.mk)
+ $(call inherit-product, vendor/nvidia/shield/foster-recovery.mk)
+ $(call inherit-product, vendor/nvidia/shield/app/shieldtech.mk)
+ $(call inherit-product, vendor/nvidia/shield/app/blakepairing.mk)
+-$(call inherit-product, vendor/nvidia/shield/app/consoleui.mk)
+ #$(call inherit-product, vendor/nvidia/shield/app/nvcamera.mk)
+ $(call inherit-product, vendor/nvidia/shield/ussrd/ussrd.mk)
+ $(call inherit-product, vendor/nvidia/shield/widevine/widevine.mk)
