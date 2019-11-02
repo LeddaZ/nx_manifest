@@ -1,0 +1,45 @@
+From d47ae75ee9e7db261f138efe33f4abe5f5d2ad39 Mon Sep 17 00:00:00 2001
+From: Andre Eisenbach <eisenbach@google.com>
+Date: Mon, 8 Jul 2019 14:49:06 -0700
+Subject: [PATCH 3/3] Switch Nintendo workaround to match by name
+
+Bug: 136478524
+Test: manual
+Change-Id: Ib60cd5adfc4db3ba93fe5ed8c15353225b6cf165
+---
+ bta/hh/bta_hh_utils.cc | 12 +++++++++---
+ 1 file changed, 9 insertions(+), 3 deletions(-)
+
+diff --git a/bta/hh/bta_hh_utils.cc b/bta/hh/bta_hh_utils.cc
+index e36978813..f3cb1b31f 100644
+--- a/bta/hh/bta_hh_utils.cc
++++ b/bta/hh/bta_hh_utils.cc
+@@ -21,6 +21,7 @@
+ #if (BTA_HH_INCLUDED == TRUE)
+ 
+ #include "bta_hh_int.h"
++#include "btif/include/btif_storage.h"
+ #include "device/include/interop.h"
+ #include "osi/include/osi.h"
+ 
+@@ -394,9 +395,14 @@ tBTA_HH_STATUS bta_hh_read_ssr_param(const RawAddress& bd_addr,
+         if (ssr_max_latency > BTA_HH_SSR_MAX_LATENCY_DEF)
+           ssr_max_latency = BTA_HH_SSR_MAX_LATENCY_DEF;
+ 
+-        if (interop_match_addr(INTEROP_HID_HOST_LIMIT_SNIFF_INTERVAL,
+-                               &bd_addr)) {
+-          if (ssr_max_latency > 18 /* slots * 0.625ms */) ssr_max_latency = 18;
++        char remote_name[BTM_MAX_REM_BD_NAME_LEN] = "";
++        if (btif_storage_get_stored_remote_name(bd_addr, remote_name)) {
++          if (interop_match_name(INTEROP_HID_HOST_LIMIT_SNIFF_INTERVAL,
++                                 remote_name)) {
++            if (ssr_max_latency > 18 /* slots * 0.625ms */) {
++              ssr_max_latency = 18;
++            }
++          }
+         }
+ 
+         *p_max_ssr_lat = ssr_max_latency;
+-- 
+2.23.0
+

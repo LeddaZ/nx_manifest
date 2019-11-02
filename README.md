@@ -1,0 +1,9 @@
+# Switch manifest for LineageOS pie
+
+### Issues
+Wifi and bt fw isn't copied to vendor, need to integrate fw symlinking in wifi loader script.
+Random graphics glitches
+Omx is broken (fixed upstreamish)
+
+bt.patch needs to be applied in hardware/interfaces, kmod.patch goes in vendor/lineage and the others go to system/bt
+vendorsetup.sh isn't used so just run lunch with lineage_foster-tab_userdebug

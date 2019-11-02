@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-16.0" />
+	<remote name="sr" fetch="https://gitlab.com/switchroot/" revision="lineage-rel32" />
+
+	<project name="CM-Shield/android_device_nintendo_icosa.git" path="device/nintendo/icosa" remote="incom" />
+
+	<project name="android/android_device_nvidia_foster.git" path="device/nvidia/foster" revision="lineage-16.0-icosa-hacks" remote="sr" />
+	<project name="CM-Shield/android_device_nvidia_foster_tab.git" path="device/nvidia/foster_tab" remote="incom" />
+
+	<project name="CM-Shield/android_device_nvidia_tegra-common.git" path="device/nvidia/tegra-common" remote="incom" />
+	<project name="CM-Shield/android_device_nvidia_t210-common.git" path="device/nvidia/t210-common" remote="incom" />
+	<project name="CM-Shield/android_device_nvidia_shield-common.git" path="device/nvidia/shield-common" remote="incom" />
+
+	<project name="CM-Shield/android_device_nvidia_icera.git" path="device/nvidia/icera" remote="incom" />
+	<project name="CM-Shield/android_device_nvidia_touch.git" path="device/nvidia/touch" remote="incom" />
+
+	<project name="kernel/l4t-kernel-4.9.git" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" revision="lineage-rel32" remote="sr" />
+	<project name="kernel/l4t-kernel-nvidia.git" path="kernel/nvidia/linux-4.9/kernel/nvidia" remote="sr" />
+	<project name="kernel/l4t-kernel-cypress-fmac.git" path="kernel/nvidia/linux-4.9/kernel/cypress-fmac" revision="lineage-16.0" remote="sr" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu.git" path="kernel/nvidia/linux-4.9/kernel/nvgpu" remote="incom" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/tegra/common" remote="incom" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/tegra" remote="incom" />
+	<project name="kernel/l4t-platform-t210-switch.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/icosa" remote="sr" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/t210" remote="incom" />
+
+	<project name="CM-Shield/android_hardware_nvidia_light.git" path="hardware/nvidia/light" remote="incom" />
+	<project name="CM-Shield/android_hardware_nvidia_memtrack.git" path="hardware/nvidia/memtrack" remote="incom" />
+	<project name="CM-Shield/android_hardware_nvidia_power.git" path="hardware/nvidia/power" remote="incom" />
+	<project name="CM-Shield/android_hardware_nvidia_thermal.git" path="hardware/nvidia/thermal" remote="incom" />
+	<project name="CM-Shield/android_hardware_nvidia_sensors.git" path="hardware/nvidia/sensors" remote="incom" />
+
+	<project name="CM-Shield/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" remote="incom" />
+
+	<project name="CM-Shield/proprietary_vendor_nvidia.git" path="vendor/nvidia" remote="incom" />
+</manifest>
