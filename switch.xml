@@ -20,6 +20,7 @@
 	<project name="kernel/l4t-kernel-cypress-fmac.git" path="kernel/nvidia/linux-4.9/kernel/cypress-fmac" revision="lineage-16.0" remote="sr" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu.git" path="kernel/nvidia/linux-4.9/kernel/nvgpu" remote="incom" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/tegra/common" remote="incom" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/common" remote="incom" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/tegra" remote="incom" />
 	<project name="kernel/l4t-platform-t210-switch.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/icosa" remote="sr" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210.git" path="kernel/nvidia/linux-4.9/hardware/nvidia/soc/t210" remote="incom" />
