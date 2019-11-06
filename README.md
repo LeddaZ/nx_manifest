@@ -2,7 +2,7 @@
 
 ### Issues
 * Wifi and bt fw isn't copied to vendor, need to integrate fw symlinking in wifi loader script.
-* Random graphics glitches
+* Random graphics glitches - Disable hw overlays in dev options
 * Omx is broken (fixed upstreamish)
 
 
