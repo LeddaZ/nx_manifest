@@ -15,7 +15,7 @@
 	<project name="CM-Shield/android_device_nvidia_icera.git" path="device/nvidia/icera" remote="incom" />
 	<project name="CM-Shield/android_device_nvidia_touch.git" path="device/nvidia/touch" remote="incom" />
 
-	<project name="kernel/l4t-kernel-4.9.git" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" revision="lineage-rel32" remote="sr" />
+	<project name="kernel/l4t-kernel-4.9.git" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" revision="lineage-rel32-goodjc" remote="sr" />
 	<project name="kernel/l4t-kernel-nvidia.git" path="kernel/nvidia/linux-4.9/kernel/nvidia" remote="sr" />
 	<project name="kernel/l4t-kernel-cypress-fmac.git" path="kernel/nvidia/linux-4.9/kernel/cypress-fmac" revision="lineage-16.0" remote="sr" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu.git" path="kernel/nvidia/linux-4.9/kernel/nvgpu" remote="incom" />
@@ -30,6 +30,9 @@
 	<project name="CM-Shield/android_hardware_nvidia_power.git" path="hardware/nvidia/power" remote="incom" />
 	<project name="CM-Shield/android_hardware_nvidia_thermal.git" path="hardware/nvidia/thermal" remote="incom" />
 	<project name="CM-Shield/android_hardware_nvidia_sensors.git" path="hardware/nvidia/sensors" remote="incom" />
+
+	<project name="android/android_hardware_nintendo_joycond.git" path="hardware/nintendo/joycond" revision="lineage-16.0" remote="sr" />
+	<project name="android/android_external_libevdev.git" path="external/libevdev" revision="lineage-16.0" remote="sr" />
 
 	<project name="CM-Shield/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" remote="incom" />
 
