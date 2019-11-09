@@ -9,13 +9,13 @@
 	<project name="CM-Shield/android_device_nvidia_foster_tab.git" path="device/nvidia/foster_tab" remote="incom" />
 
 	<project name="CM-Shield/android_device_nvidia_tegra-common.git" path="device/nvidia/tegra-common" remote="incom" />
-	<project name="CM-Shield/android_device_nvidia_t210-common.git" path="device/nvidia/t210-common" remote="incom" />
+	<project name="android/android_device_nvidia_t210-common.git" path="device/nvidia/t210-common" revision="lineage-16.0" remote="sr" />
 	<project name="CM-Shield/android_device_nvidia_shield-common.git" path="device/nvidia/shield-common" remote="incom" />
 
 	<project name="CM-Shield/android_device_nvidia_icera.git" path="device/nvidia/icera" remote="incom" />
 	<project name="CM-Shield/android_device_nvidia_touch.git" path="device/nvidia/touch" remote="incom" />
 
-	<project name="kernel/l4t-kernel-4.9.git" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" revision="lineage-rel32-goodjc" remote="sr" />
+	<project name="kernel/l4t-kernel-4.9.git" path="kernel/nvidia/linux-4.9/kernel/kernel-4.9" revision="lineage-rel32" remote="sr" />
 	<project name="kernel/l4t-kernel-nvidia.git" path="kernel/nvidia/linux-4.9/kernel/nvidia" remote="sr" />
 	<project name="kernel/l4t-kernel-cypress-fmac.git" path="kernel/nvidia/linux-4.9/kernel/cypress-fmac" revision="lineage-16.0" remote="sr" />
 	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu.git" path="kernel/nvidia/linux-4.9/kernel/nvgpu" remote="incom" />
@@ -31,6 +31,8 @@
 	<project name="CM-Shield/android_hardware_nvidia_thermal.git" path="hardware/nvidia/thermal" remote="incom" />
 	<project name="CM-Shield/android_hardware_nvidia_sensors.git" path="hardware/nvidia/sensors" remote="incom" />
 
+	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO.git" path="hardware/STMicroElectronics/SensorHAL_IIO" revision="lineage-16.0" remote="sr" />
+	
 	<project name="android/android_hardware_nintendo_joycond.git" path="hardware/nintendo/joycond" revision="lineage-16.0" remote="sr" />
 	<project name="android/android_external_libevdev.git" path="external/libevdev" revision="lineage-16.0" remote="sr" />
 
