@@ -1,7 +1,7 @@
 From ab09e2f215db1c32d778c00b618923e6e2367cbb Mon Sep 17 00:00:00 2001
 From: Billy Laws <blaws05@gmail.com>
 Date: Thu, 7 Nov 2019 20:30:32 +0000
-Subject: [PATCH] Also apply Pro Controller workarount to Joycons
+Subject: [PATCH] Also apply Pro Controller workaround to Joycons
 
 Change-Id: Ie9ef147c4b427bb06c73ae00466db4c57f5822d2
 
