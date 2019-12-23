@@ -1,0 +1,25 @@
+From 5394567429fa7da4de423ee8dae5caec515ed38b Mon Sep 17 00:00:00 2001
+From: Billy Laws <blaws05@gmail.com>
+Date: Mon, 23 Dec 2019 23:01:31 +0000
+Subject: [PATCH 3/3] HACK: use platform sig for shieldtech
+
+---
+ common/shieldtech/Android.mk | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/common/shieldtech/Android.mk b/common/shieldtech/Android.mk
+index 5dcf672..b607400 100644
+--- a/common/shieldtech/Android.mk
++++ b/common/shieldtech/Android.mk
+@@ -18,7 +18,7 @@ include $(CLEAR_VARS)
+ LOCAL_MODULE               := NvShieldTech
+ LOCAL_MODULE_TAGS          := optional
+ LOCAL_SRC_FILES            := app/NvShieldTech.apk
+-LOCAL_CERTIFICATE          := PRESIGNED
++LOCAL_CERTIFICATE          := platform
+ LOCAL_MODULE_CLASS         := APPS
+ LOCAL_MODULE_SUFFIX        := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+ LOCAL_PRIVILEGED_MODULE    := true
+-- 
+2.23.0
+

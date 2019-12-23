@@ -1,0 +1,45 @@
+diff --git a/services/inputflinger/Android.bp b/services/inputflinger/Android.bp
+index 8caa107..ee0af4e 100644
+--- a/services/inputflinger/Android.bp
++++ b/services/inputflinger/Android.bp
+@@ -23,6 +23,7 @@ cc_library_shared {
+         "InputManager.cpp",
+         "InputReader.cpp",
+         "InputWindow.cpp",
++        "InputHook.cpp",
+     ],
+ 
+     shared_libs: [
+@@ -36,6 +37,10 @@ cc_library_shared {
+         "libutils",
+         "libui",
+         "libhardware_legacy",
++        "libhidlbase",
++        "libhidltransport",
++        "vendor.nvidia.hardware.shieldtech.inputflinger@2.0",
++
+     ],
+ 
+     cflags: [
+@@ -48,20 +53,7 @@ cc_library_shared {
+     ],
+ 
+     export_include_dirs: ["."],
+-
+-    product_variables: {
+-        lineage: {
+-            uses_nvidia_enhancements: {
+-                srcs: ["InputHook.cpp"],
+-                shared_libs: [
+-                    "libhidlbase",
+-                    "libhidltransport",
+-                    "vendor.nvidia.hardware.shieldtech.inputflinger@2.0",
+-                ],
+-                cppflags: ["-DNV_ANDROID_FRAMEWORK_ENHANCEMENTS"],
+-            },
+-        },
+-    },
++    cppflags: ["-DNV_ANDROID_FRAMEWORK_ENHANCEMENTS"],
+ }
+ 
+ subdirs = [
