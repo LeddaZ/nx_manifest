@@ -1,0 +1,16 @@
+diff --git a/common/nvcpl/Android.mk b/common/nvcpl/Android.mk
+index 612d230..f205721 100644
+--- a/common/nvcpl/Android.mk
++++ b/common/nvcpl/Android.mk
+@@ -18,7 +18,7 @@ include $(CLEAR_VARS)
+ LOCAL_MODULE               := NvCPLSvc
+ LOCAL_MODULE_TAGS          := optional
+ LOCAL_SRC_FILES            := app/NvCPLSvc/NvCPLSvc.apk
+-LOCAL_CERTIFICATE          := PRESIGNED
++LOCAL_CERTIFICATE          := platform
+ LOCAL_MODULE_CLASS         := APPS
+ LOCAL_MODULE_SUFFIX        := $(COMMON_ANDROID_PACKAGE_SUFFIX)
+ LOCAL_REQUIRED_MODULES     := libnvcontrol_jni
+diff --git a/common/shieldtech/app/NvShieldTech.apk b/common/shieldtech/app/NvShieldTech.apk
+index e6fc2f7..e011103 100644
+Binary files a/common/shieldtech/app/NvShieldTech.apk and b/common/shieldtech/app/NvShieldTech.apk differ
