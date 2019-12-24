@@ -1,0 +1,13 @@
+diff --git a/core/java/android/view/ViewRootImpl.java b/core/java/android/view/ViewRootImpl.java
+index ef4d0c34..842d926c 100644
+--- a/core/java/android/view/ViewRootImpl.java
++++ b/core/java/android/view/ViewRootImpl.java
+@@ -5253,7 +5253,7 @@ public final class ViewRootImpl implements ViewParent,
+                     return FINISH_HANDLED;
+                 } else if ((source & InputDevice.SOURCE_CLASS_JOYSTICK) != 0) {
+                     mJoystick.process(event);
+-                    return FINISH_HANDLED;
++//                    return FINISH_HANDLED;
+                 } else if ((source & InputDevice.SOURCE_TOUCH_NAVIGATION)
+                         == InputDevice.SOURCE_TOUCH_NAVIGATION) {
+                     mTouchNavigation.process(event);

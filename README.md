@@ -10,7 +10,7 @@
 * Apply dolby, shieldtech, hekate and wlan patches to vendor/nvidia.
 * Apply both PRs [here](https://github.com/DanielOgorchock/joycond/pulls) to hardware/nintendo/joycond.
 * Repopick the nvidia-enhancements-p topic off of lineage gerrit.
-* Apply hack-input.patch to frameworks/native
+* Apply frameworks_native-rsmouse.patch to frameworks/native
 * Copy NvShieldTech-hack.apk from patches to vendor/nvidia/common/shieldtech/app/NvShieldTech.apk (Forces on RSMouse)
 
 ### Notes
