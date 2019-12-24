@@ -1,7 +1,7 @@
 # Switch manifest for LineageOS pie
 
 ### Issues
-* Random graphics glitches - Disable hw overlays in dev options.
+* Random graphics glitches without hwc patch.
 
 ### Patching
 * Apply bt.patch in hardware/interfaces.
@@ -10,8 +10,9 @@
 * Apply dolby, shieldtech, hekate and wlan patches to vendor/nvidia.
 * Apply both PRs [here](https://github.com/DanielOgorchock/joycond/pulls) to hardware/nintendo/joycond.
 * Repopick the nvidia-enhancements-p topic off of lineage gerrit.
-* Apply frameworks_native-rsmouse.patch to frameworks/native
+* Apply frameworks_base-rsmouse.patch to frameworks/base
+* Apply frameworks_native-hwc.patch to frameworks/native
 * Copy NvShieldTech-hack.apk from patches to vendor/nvidia/common/shieldtech/app/NvShieldTech.apk (Forces on RSMouse)
 
 ### Notes
-* vendorsetup.sh isn't used so just run lunch with lineage_foster_tab-userdebug.
+* vendorsetup.sh isn't used so just run lunch with lineage_icosa-userdebug.
