@@ -5,11 +5,11 @@
 
 ### Patching
 Basic:
-* Apply hardware_interfaces-bt.patch in hardware/interfaces.
-* Apply vendor_lineage-kmod.patch in vendor/lineage.
-* Apply frameworks_native-hwc.patch to frameworks/native
 * Repopick the nvidia-enhancements-p topic off of lineage gerrit.
 * Repopick the joycon-p topic off of lineage gerrit.
+* Repopick the icosa-bt topic off of lineage gerrit.
+* Apply frameworks_native-hwc.patch to frameworks/native
+* Apply vendor_lineage-kmod.patch in vendor/lineage.
 
 For RSMouse:
 * Apply frameworks_base-rsmouse.patch to frameworks/base
