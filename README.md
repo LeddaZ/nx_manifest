@@ -5,13 +5,10 @@
 
 ### Patching
 Basic:
-* Repopick the nvidia-enhancements-p topic off of lineage gerrit.
-* Repopick the joycon-p topic off of lineage gerrit.
-* Repopick the icosa-bt topic off of lineage gerrit.
-
-For RSMouse:
-* Apply frameworks_base-rsmouse.patch to frameworks/base
-* Copy NvShieldTech-hack.apk from patches to vendor/nvidia/shield/shieldtech/app/NvShieldTech.apk (Forces on RSMouse)
+* Repopick the nvidia-enhancements-p, nvidia-beyonder-p, nvidia-nvgpu-p, nvidia-shieldtech-p, joycon-p and icosa-bt topics off of lineage gerrit.
+* Apply all patches to their respective directories (from patches folder).
 
 ### Notes
-* Use foster_tab if you want Nvidia games
+* Beyonder and RSMouse both require ATV builds to fully work without hacks.
+* For Beyonder (Shield TV remote app) you can run the command `settings put global mouse_mode 0` once in ADB to enable the trackpad.
+* Use foster\_tab if you want Nvidia games.
