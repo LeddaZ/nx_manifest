@@ -5,7 +5,8 @@
 
 ### Patching
 Basic:
-* Repopick the nvidia-enhancements-p, nvidia-beyonder-p, nvidia-nvgpu-p, nvidia-shieldtech-p, joycon-p and icosa-bt topics off of lineage gerrit.
+* Repopick the nvidia-enhancements-p, nvidia-shieldtech-p,nvidia-nvgpu-p, nvidia-beyonder-p, joycon-p and icosa-bt topics off of lineage gerrit.
+* Also `repopick 272671`.
 * Apply all patches to their respective directories (from patches folder).
 
 ### Notes
