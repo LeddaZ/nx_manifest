@@ -1,0 +1,13 @@
+diff --git a/overlay/frameworks/base/core/res/res/values/config.xml b/overlay/frameworks/base/core/res/res/values/config.xml
+index e6c32fa..8344bee 100644
+--- a/overlay/frameworks/base/core/res/res/values/config.xml
++++ b/overlay/frameworks/base/core/res/res/values/config.xml
+@@ -23,4 +23,8 @@
+     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
+          autodetected from the Configuration. -->
+     <bool name="config_showNavigationBar">true</bool>
++
++    <string-array translatable="false" name="config_deviceSpecificSystemServices">
++        <item>com.android.server.tv.TvRemoteService</item>
++    </string-array>
+ </resources>
