@@ -1,7 +1,7 @@
 # Switch manifest for LineageOS Pie
 
 ### Issues
-* Random graphics glitches with glcomposer
+* Grey colour overlay on screen
 
 ### Patching
 Basic:
