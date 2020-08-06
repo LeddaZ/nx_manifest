@@ -2,10 +2,10 @@ diff --git a/overlay/frameworks/base/core/res/res/values/config.xml b/overlay/fr
 index e6c32fa..8344bee 100644
 --- a/overlay/frameworks/base/core/res/res/values/config.xml
 +++ b/overlay/frameworks/base/core/res/res/values/config.xml
-@@ -23,4 +23,8 @@
-     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
-          autodetected from the Configuration. -->
-     <bool name="config_showNavigationBar">true</bool>
+@@ -27,4 +27,8 @@
+     <!-- Controls whether the nav bar can move from the bottom to the side in landscape.
+          Only applies if the device display is not square. -->
+     <bool name="config_navBarCanMove">false</bool>
 +
 +    <string-array translatable="false" name="config_deviceSpecificSystemServices">
 +        <item>com.android.server.tv.TvRemoteService</item>
