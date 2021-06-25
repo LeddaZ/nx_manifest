@@ -1,0 +1,42 @@
+stages:
+  - dependency_build
+  - build
+
+deploy:
+  image: docker:19.03.12
+  stage: dependency_build
+  services:
+    - name: docker:19.03.12-dind
+  script:
+    - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$CI_REGISTRY"
+    - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH" .
+    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH"
+
+.build:
+  image: "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH"
+  stage: build
+  services:
+    - docker:dind
+  variables:
+      LUNCH: ""
+  script:
+    - rm -rf /build/android/output/*
+    - .repo/manifests/snack.sh -y
+    - source build/envsetup.sh
+    - lunch ${LUNCH}
+    - make bakon
+    - mkdir -p artifacts
+    - cp -r /build/android/output/* artifacts/
+  artifacts:
+    paths:
+      - artifacts/
+
+icosa-build:
+  extends: .build
+  variables:
+      LUNCH: "icosa_sr-userdebug"
+
+maru-icosa-build:
+    extends: .build
+    variables:
+        LUNCH: "maru_icosa_sr-userdebug"
