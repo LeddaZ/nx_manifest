@@ -21,7 +21,7 @@ deploy:
       LUNCH: ""
   script:
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
-    - git clone https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
+    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
     - rm -rf /build/android/output/*
     - .repo/local_manifests/snack/snack.sh -y
     - source build/envsetup.sh
@@ -38,7 +38,3 @@ icosa-build:
   variables:
       LUNCH: "lineage_icosa_sr-userdebug"
 
-maru-icosa-build:
-    extends: .build
-    variables:
-        LUNCH: "maru_icosa_sr-userdebug"
