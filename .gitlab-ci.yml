@@ -20,6 +20,8 @@ deploy:
   variables:
       LUNCH: ""
   script:
+    - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
+    - git clone https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
     - rm -rf /build/android/output/*
     - .repo/local_manifests/snack/snack.sh -y
     - source build/envsetup.sh
