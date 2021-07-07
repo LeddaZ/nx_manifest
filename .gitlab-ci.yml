@@ -22,16 +22,14 @@ deploy:
   script:
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
     - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
-    - rm -rf /build/android/output/*
     - .repo/local_manifests/snack/snack.sh -y
     - source build/envsetup.sh
     - lunch ${LUNCH}
     - make bacon
-    - mkdir -p artifacts
-    - cp -r /build/android/output/* artifacts/
+    - 7z a artifacts.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
-      - artifacts/
+      - artifacts.zip
 
 icosa-build:
   extends: .build

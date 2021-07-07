@@ -25,6 +25,7 @@ RUN apt update -y && apt upgrade -y && apt install -y \
     libxml2 \
     libxml2-utils \
     lzop \
+    p7zip-full \
     pngcrush \
     rsync \
     schedtool \
