@@ -7,7 +7,7 @@ To set up dev environment:
 ```
 cd <folder>
 repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
-git clone https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
+git clone https://gitlab.com/switchroot/android/manifest.git --recursive -b lineage-17.1-icosa_sr .repo/local_manifests
 .repo/local_manifests/snack/snack.sh -y
 ```
 
