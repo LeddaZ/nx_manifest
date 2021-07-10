@@ -26,10 +26,12 @@ deploy:
     - source build/envsetup.sh
     - lunch ${LUNCH}
     - make bacon
-    - 7z a artifacts.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+    - OUTFOLDER=icosa-tab-$(date +'%Y%m%d')-dev
+    - mkdir -p ${OUTFOLDER}/
+    - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb ${OUTFOLDER}/
   artifacts:
     paths:
-      - artifacts.zip
+      - ${OUTFOLDER}/
 
 icosa-build:
   extends: .build
