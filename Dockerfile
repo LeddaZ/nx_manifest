@@ -57,7 +57,6 @@ RUN echo "Set disable_coredump false" >> /etc/sudo.conf
 USER build
 ENV BUILDBASE /build
 WORKDIR ${BUILDBASE}
-VOLUME ${BUILDBASE}
 
 RUN git config --global user.email "fake@name.com" && git config --global user.name Fake Name && git config --global color.ui false
 
