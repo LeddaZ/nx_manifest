@@ -32,6 +32,9 @@ deploy:
   artifacts:
     paths:
       - artifacts/
+  rules:
+    - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
+      when: manual
 
 icosa-build:
   extends: .build
