@@ -63,7 +63,12 @@
 	<project name="android/android_external_libevdev" path="external/libevdev" remote="switchroot" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
 	<project name="joycond" path="hardware/nintendo/joycond" remote="danielo" />
+
+	<!-- Hybris repos -->
 	<project path="external/libhybris" name="libhybris" remote="mer" />
+	<project path="rpm/" name="hybris/droid-hal-icosa_sr" revision="master" remote="switchroot" />
+	<project path="hybris/droid-configs" name="hybris/droid-config-icosa_sr" revision="master" remote="switchroot" />
+	<project path="hybris/droid-hal-version-icosa_sr" name="hybris/droid-hal-version-icosa_sr" revision="master" remote="switchroot" />
 
 	<!-- Nvidia hardware repos -->
 	<project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" />
