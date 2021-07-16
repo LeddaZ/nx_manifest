@@ -7,7 +7,7 @@
 	<project name="android/android_device_nintendo_icosa_sr" path="device/nintendo/icosa_sr" remote="sr" />
 	<!--<project name="android/android_device_nintendo_icosa_tv_sr" path="device/nintendo/icosa_tv_sr" remote="sr" />-->
 
-	<project name="CM-Shield/android_device_nvidia_foster.git" path="device/nvidia/foster" revision="lineage-16.0" remote="sr" />
+	<project name="CM-Shield/android_device_nvidia_foster.git" path="device/nvidia/foster" remote="incom" />
 	<project name="CM-Shield/android_device_nvidia_foster_tab.git" path="device/nvidia/foster_tab" remote="incom" />
 
 	<project name="CM-Shield/android_device_nvidia_tegra-common.git" path="device/nvidia/tegra-common" remote="incom" />
