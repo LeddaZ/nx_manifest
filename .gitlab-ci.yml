@@ -22,7 +22,7 @@ deploy:
   script:
     - mkdir -p android/lineage; cd /build/android/
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
-    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
+    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests || echo Manifest already present--snacking now.
     - .repo/local_manifests/snack/snack.sh -y
     - source build/envsetup.sh
     - lunch ${LUNCH}
