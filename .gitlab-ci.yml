@@ -20,6 +20,7 @@ deploy:
   variables:
       LUNCH: ""
   script:
+    - mkdir -p android/lineage; cd /build/android/
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
     - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests
     - .repo/local_manifests/snack/snack.sh -y
@@ -27,11 +28,14 @@ deploy:
     - lunch ${LUNCH}
     - make bacon
     - OUTFOLDER=icosa-tab-$(date +'%Y%m%d')-dev
-    - mkdir -p artifacts/${OUTFOLDER}
-    - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb artifacts/${OUTFOLDER}/
+    - mkdir -p /build/artifacts/${OUTFOLDER}
+    - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb /build/artifacts/${OUTFOLDER}/
   artifacts:
     paths:
-      - artifacts/
+      - /build/artifacts/
+  rules:
+    - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
+      when: manual
 
 icosa-build:
   extends: .build
