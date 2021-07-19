@@ -20,13 +20,13 @@ deploy:
   variables:
       LUNCH: ""
   script:
-    - mkdir -p android/lineage; cd /build/android/
+    - mkdir -p android/lineage; cd /build/android/lineage
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
     - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests || echo Manifest already present--snacking now.
     - .repo/local_manifests/snack/snack.sh -y
     - source build/envsetup.sh
     - lunch ${LUNCH}
-    - make bacon
+    - mka bacon
     - OUTFOLDER=icosa-tab-$(date +'%Y%m%d')-dev
     - mkdir -p /build/artifacts/${OUTFOLDER}
     - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb /build/artifacts/${OUTFOLDER}/
