@@ -32,7 +32,7 @@ deploy:
     - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb /build/artifacts/${OUTFOLDER}/
   artifacts:
     paths:
-      - /build/artifacts/
+      - /build/artifacts/${OUTFOLDER}/
   rules:
     - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
       when: manual
