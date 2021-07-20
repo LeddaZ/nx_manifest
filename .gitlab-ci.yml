@@ -19,7 +19,6 @@ deploy:
     - docker:dind
   variables:
       LUNCH: ""
-      OUTFOLDER: "icosa-tab-$(date +'%Y%m%d')-dev"
   script:
     - mkdir -p /build/android/lineage; cd /build/android/lineage
     - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
@@ -28,11 +27,10 @@ deploy:
     - source build/envsetup.sh
     - lunch ${LUNCH}
     - mka bacon
-    - mkdir -p /build/artifacts/${OUTFOLDER}
-    - cp out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb /build/artifacts/${OUTFOLDER}/
+    - zip -j /build/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
-      - /build/artifacts/${OUTFOLDER}/
+      - /build/icosa-tab-*-dev.zip
   rules:
     - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
       when: manual
