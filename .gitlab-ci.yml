@@ -27,10 +27,11 @@ deploy:
     - source build/envsetup.sh
     - lunch ${LUNCH}
     - mka bacon
-    - zip -j /build/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+    - rm /build/android/icosa-tab-*-dev.zip || true
+    - zip -j /build/android/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
-      - /build/icosa-tab-*-dev.zip
+      - /build/android/icosa-tab-*-dev.zip
   rules:
     - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
       when: manual
