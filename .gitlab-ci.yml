@@ -5,6 +5,8 @@ stages:
 deploy:
   image: docker:19.03.12
   stage: dependency_build
+  variables:
+    DOCKER_HOST: tcp://docker:2375/
   services:
     - name: docker:19.03.12-dind
   script:
