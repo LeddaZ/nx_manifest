@@ -3,5 +3,6 @@
 "frameworks_base-beyonder-hack.patch","frameworks/base"
 "frameworks_base-rsmouse-timeout.patch","frameworks/base"
 "frameworks_native-joycon-filter.patch","frameworks/native"
+"frameworks_native-stb.patch","frameworks/native"
 "system_core-gatekeeper-hack.patch","system/core"
 "hardware_nvidia_inputhook-timeout.patch","hardware/nvidia/input_hook"
