@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-17.1" />
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-17.1" />
 	<remote name="muppets" fetch="https://github.com/TheMuppets/" revision="lineage-17.1" />
 	<remote name="danielo" fetch="https://github.com/DanielOgorchock/" revision="master" />
@@ -9,9 +8,7 @@
 	<!-- Device repos -->
 	<project name="android/android_device_nintendo_icosa_sr" path="device/nintendo/icosa_sr" remote="switchroot" />
 	<project name="android/android_device_nintendo_icosa_tv_sr" path="device/nintendo/icosa_tv_sr" remote="switchroot" />
-	<project name="CM-Shield/android_device_nvidia_foster" path="device/nvidia/foster" remote="incom" />
 	<project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common" />
-	<project name="LineageOS/android_device_nvidia_foster_tab" path="device/nvidia/foster_tab" />
 	<project name="LineageOS/android_device_nvidia_touch" path="device/nvidia/touch" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" />
 	<project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" />
