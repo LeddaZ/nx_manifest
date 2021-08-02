@@ -29,6 +29,7 @@ deploy:
     - rm out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip || true
     - source build/envsetup.sh
     - lunch ${LUNCH}
+    - make installclean
     - mka bacon
     - zip -j $CI_PROJECT_DIR/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
