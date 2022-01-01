@@ -3,7 +3,6 @@
 
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-17.1" />
 	<remote name="muppets" fetch="https://github.com/TheMuppets/" revision="lineage-17.1" />
-	<remote name="danielo" fetch="https://github.com/DanielOgorchock/" revision="master" />
 
 	<!-- Device repos -->
 	<project name="android/android_device_nintendo_icosa_sr" path="device/nintendo/icosa_sr" remote="switchroot" />
@@ -55,10 +54,11 @@
 	<!-- Prebuilt repos -->
 	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" />
 
-	<!-- External repos -->
+
+	<!-- Driver repos -->
+	<project name="LineageOS/android_hardware_nintendo_joycond" path="hardware/nintendo/joycond" />
 	<project name="android/android_external_libevdev" path="external/libevdev" remote="switchroot" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
-	<project name="joycond" path="hardware/nintendo/joycond" remote="danielo" />
 
 	<!-- Nvidia hardware repos -->
 	<project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" />
