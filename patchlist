@@ -1,4 +1,3 @@
-"bionic-intrinsics.patch","bionic"
 "device_lineage_atv-res.patch","device/lineage/atv"
 "frameworks_base-beyonder-hack.patch","frameworks/base"
 "frameworks_base-rsmouse-timeout.patch","frameworks/base"
