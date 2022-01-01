@@ -6,3 +6,4 @@
 "system_core-gatekeeper-hack.patch","system/core"
 "hardware_interfaces-audio-mix.patch","hardware/interfaces"
 "hardware_nvidia_inputhook-timeout.patch","hardware/nvidia/input_hook"
+"hardware_nvidia_power-joycon.patch","hardware/nvidia/power"
