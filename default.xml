@@ -54,10 +54,9 @@
 	<!-- Prebuilt repos -->
 	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" />
 
-
 	<!-- Driver repos -->
 	<project name="LineageOS/android_hardware_nintendo_joycond" path="hardware/nintendo/joycond" />
-	<project name="android/android_external_libevdev" path="external/libevdev" remote="switchroot" />
+	<project name="LineageOS/android_external_libevdev" path="external/libevdev" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
 
 	<!-- Nvidia hardware repos -->
