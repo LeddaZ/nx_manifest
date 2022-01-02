@@ -1,0 +1,43 @@
+From 3532c5e7844dc709cccaa9efc40f46f28fbf73cf Mon Sep 17 00:00:00 2001
+From: Billy Laws <blaws05@gmail.com>
+Date: Fri, 13 Nov 2020 22:40:07 +0000
+Subject: [PATCH] Fix joycon support
+
+---
+ nvpowerhal.cpp | 12 +++++-------
+ 1 file changed, 5 insertions(+), 7 deletions(-)
+
+diff --git a/nvpowerhal.cpp b/nvpowerhal.cpp
+index 3820ab7..e1368d8 100644
+--- a/nvpowerhal.cpp
++++ b/nvpowerhal.cpp
+@@ -607,9 +607,9 @@ void common_power_set_interactive(struct powerhal_info *pInfo, int on)
+         }
+     }
+ 
+-    while (1)
++    while (on)
+     {
+-        snprintf(path, sizeof(path), "/sys/bus/serial/serial%d-0/of_node/name", i);
++        snprintf(path, sizeof(path), "/sys/bus/serial/devices/serial%d-0/of_node/name", i);
+         if (access(path, F_OK) < 0)
+             break;
+         else {
+@@ -617,11 +617,9 @@ void common_power_set_interactive(struct powerhal_info *pInfo, int on)
+             sysfs_read(path, name, MAX_CHARS);
+             if (name[strlen(name) - 1] == '\n')
+                 name[strlen(name) - 1] = '\0';
+-            if (strncmp(name, "joyconl", MAX_CHARS) || strncmp(name, "joyconr", MAX_CHARS)) {
+-                if (0 == on)
+-                    ALOGI("Disabling input device: %s", name);
+-                else
+-                    ALOGI("Enabling input device: %s", name);
++            if (!strncmp(name, "joyconl", MAX_CHARS) || !strncmp(name, "joyconr", MAX_CHARS)) {
++                snprintf(path, sizeof(path), "/sys/bus/serial/devices/serial%d-0/wake", i);
++                ALOGI("Waking up input device: %s", name);
+                 sysfs_write(path, state);
+ 	    }
+         }
+-- 
+2.32.0
+
