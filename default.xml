@@ -2,7 +2,6 @@
 <manifest>
 
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-17.1" />
-	<remote name="muppets" fetch="https://github.com/TheMuppets/" revision="lineage-17.1" />
 
 	<!-- Device repos -->
 	<project name="android/android_device_nintendo_icosa_sr" path="device/nintendo/icosa_sr" remote="switchroot" />
@@ -67,6 +66,6 @@
 	<project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" />
 
 	<!-- Vendor repos -->
-	<project name="proprietary_vendor_nvidia" path="vendor/nvidia" remote="muppets" />
+	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
 	<project name="android/android_vendor_switchroot" path="vendor/switchroot" remote="switchroot" />
 </manifest>
