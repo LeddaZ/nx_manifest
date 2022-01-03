@@ -29,7 +29,7 @@ deploy:
     - .repo/local_manifests/snack/snack.sh -y
     - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
     - source build/envsetup.sh
-    - lunch ${BUILD_TYPE}
+    - lunch "${BUILD_TYPE}"
     - make installclean
     - mka bacon
     - zip -j $CI_PROJECT_DIR/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
@@ -37,19 +37,11 @@ deploy:
     paths:
       - $CI_PROJECT_DIR/icosa-tab-*-dev.zip
   rules:
-    - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
-      when: manual
-    - if: "$CI_COMMIT_BRANCH == 'lineage-18.1'"
+    - if: "$CI_COMMIT_BRANCH == 'continuous-integration'"
       when: manual
 
-icosa-userdebug:
+icosa-build:
   extends: .build
   variables:
       BUILD_TYPE: "lineage_icosa_sr-userdebug"
       LINEAGE_BRANCH: "lineage-17.1"
-
-#18.1-userdebug:
-#  extends: .build
-#  variables:
-#      BUILD_TYPE: "lineage_icosa_sr-userdebug"
-#      LINEAGE_BRANCH: "lineage-18.1"
