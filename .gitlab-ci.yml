@@ -20,26 +20,36 @@ deploy:
   services:
     - docker:dind
   variables:
-      LUNCH: ""
+      BUILD_TYPE: ""
+      LINEAGE_BRANCH: ""
   script:
     - mkdir -p /build/android/lineage; cd /build/android/lineage
-    - repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
-    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b lineage-17.1-icosa_sr .repo/local_manifests || echo Manifest already present--snacking now.
+    - repo init -u https://github.com/LineageOS/android.git -b "${LINEAGE_BRANCH}"
+    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${CI_COMMIT_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
     - .repo/local_manifests/snack/snack.sh -y
-    - rm out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip || true
+    - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
     - source build/envsetup.sh
-    - lunch ${LUNCH}
+    - lunch ${BUILD_TYPE}
     - make installclean
     - mka bacon
-    - zip -j $CI_PROJECT_DIR/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-17.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+    - zip -j $CI_PROJECT_DIR/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
       - $CI_PROJECT_DIR/icosa-tab-*-dev.zip
   rules:
     - if: "$CI_COMMIT_BRANCH == 'lineage-17.1-icosa_sr'"
       when: manual
+    - if: "$CI_COMMIT_BRANCH == 'lineage-18.1'"
+      when: manual
 
-icosa-build:
+17.1-userdebug:
   extends: .build
   variables:
-      LUNCH: "lineage_icosa_sr-userdebug"
+      BUILD_TYPE: "lineage_icosa_sr-userdebug"
+      LINEAGE_BRANCH: "lineage-17.1"
+
+#18.1-userdebug:
+#  extends: .build
+#  variables:
+#      BUILD_TYPE: "lineage_icosa_sr-userdebug"
+#      LINEAGE_BRANCH: "lineage-18.1"
