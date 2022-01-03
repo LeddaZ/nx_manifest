@@ -35,9 +35,6 @@ deploy:
   artifacts:
     paths:
       - ${CI_PROJECT_DIR}/icosa-tab-*-dev.zip
-  rules:
-    - if: "$CI_COMMIT_BRANCH == 'continuous-integration'"
-      when: manual
 
 icosa-build:
   extends: .build
