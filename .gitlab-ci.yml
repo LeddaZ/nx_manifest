@@ -42,7 +42,7 @@ deploy:
     - if: "$CI_COMMIT_BRANCH == 'lineage-18.1'"
       when: manual
 
-17.1-userdebug:
+icosa-userdebug:
   extends: .build
   variables:
       BUILD_TYPE: "lineage_icosa_sr-userdebug"
