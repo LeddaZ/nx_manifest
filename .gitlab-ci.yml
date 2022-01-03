@@ -8,34 +8,35 @@ deploy:
   services:
     - name: docker:dind
   script:
-    - docker login -u gitlab-ci-token -p "$CI_JOB_TOKEN" "$CI_REGISTRY"
-    - docker build -t "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH" .
-    - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH"
+    - docker login -u gitlab-ci-token -p "${CI_JOB_TOKEN}" "${CI_REGISTRY}"
+    - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}" .
+    - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
 
 .build:
-  image: "$CI_REGISTRY_IMAGE:$CI_COMMIT_BRANCH"
+  image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
   stage: build
   services:
     - docker:dind
   variables:
       BUILD_TYPE: ""
       LINEAGE_BRANCH: ""
+      MANIFEST_BRANCH: ""
   script:
     - mkdir -p /build/android/lineage; cd /build/android/lineage
     - repo init -u https://github.com/LineageOS/android.git -b "${LINEAGE_BRANCH}"
-    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${CI_COMMIT_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
+    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${MANIFEST_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
     - .repo/local_manifests/snack/snack.sh -y
     - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
     - source build/envsetup.sh
     - lunch "${BUILD_TYPE}"
     - make installclean
     - mka bacon
-    - zip -j $CI_PROJECT_DIR/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+    - zip -j ${CI_PROJECT_DIR}/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
-      - $CI_PROJECT_DIR/icosa-tab-*-dev.zip
+      - ${CI_PROJECT_DIR}/icosa-tab-*-dev.zip
   rules:
-    - if: "$CI_COMMIT_BRANCH == 'continuous-integration'"
+    - if: "${CI_COMMIT_BRANCH} == 'continuous-integration'"
       when: manual
 
 icosa-build:
@@ -43,3 +44,4 @@ icosa-build:
   variables:
       BUILD_TYPE: "lineage_icosa_sr-userdebug"
       LINEAGE_BRANCH: "lineage-17.1"
+      MANIFEST_BRANCH: "lineage-17.1-icosa_sr"
