@@ -1,9 +1,13 @@
 stages:
   - prepare
   - setup
-  - build
+  - icosa:tab
+  - icosa:atv
 
-deploy:
+#
+# PREPARE STAGE
+#
+prepare:
   image: docker:dind
   stage: prepare
   services:
@@ -13,6 +17,9 @@ deploy:
     - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}" .
     - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
 
+#
+# SETUP STAGE
+#
 setup:
   image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
   stage: setup
@@ -27,9 +34,11 @@ setup:
     - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${MANIFEST_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
     - .repo/local_manifests/snack/snack.sh -y
 
+#
+# BUILD JOB TEMPLATE
+#
 .build:
   image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
-  stage: build
   services:
     - docker:dind
   variables:
@@ -43,8 +52,12 @@ setup:
     - make installclean
     - mka bacon
 
+#
+# ICOSA TAB
+#
 icosa-tab:
   extends: .build
+  stage: icosa:tab
   variables:
     BUILD_TYPE: "lineage_icosa_sr-userdebug"
   script:
@@ -52,8 +65,13 @@ icosa-tab:
   artifacts:
     paths:
       - ${CI_PROJECT_DIR}/icosa-tab-*-dev.zip
+
+#
+# ICOSA TV
+#
 icosa-atv:
    extends: .build
+   stage: icosa:atv
    variables:
      BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
    script:
