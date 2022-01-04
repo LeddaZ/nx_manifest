@@ -43,6 +43,7 @@ setup:
     - docker:dind
   variables:
     BUILD_TYPE: ""
+    TYPE: ""
   before_script:
     - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
   script:
@@ -51,7 +52,10 @@ setup:
     - lunch "${BUILD_TYPE}"
     - make installclean
     - mka bacon
-
+    - zip -j ${CI_PROJECT_DIR}/icosa-${TYPE}-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+  artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/icosa-${TYPE}-*-dev.zip
 #
 # ICOSA TAB
 #
@@ -60,11 +64,7 @@ icosa-tab:
   stage: icosa:tab
   variables:
     BUILD_TYPE: "lineage_icosa_sr-userdebug"
-  script:
-    - zip -j ${CI_PROJECT_DIR}/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
-  artifacts:
-    paths:
-      - ${CI_PROJECT_DIR}/icosa-tab-*-dev.zip
+    TYPE: "tab"
 
 #
 # ICOSA TV
@@ -74,8 +74,4 @@ icosa-atv:
    stage: icosa:atv
    variables:
      BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
-   script:
-    - zip -j ${CI_PROJECT_DIR}/icosa-atv-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
-   artifacts:
-    paths:
-      - ${CI_PROJECT_DIR}/icosa-atv-*-dev.zip
+      TYPE: "atv"
