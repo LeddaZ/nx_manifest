@@ -23,6 +23,7 @@ prepare:
 setup:
   image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
   stage: setup
+  needs: ["prepare"]
   services:
     - docker:dind
   variables:
@@ -62,6 +63,7 @@ setup:
 icosa-tab:
   extends: .build
   stage: icosa:tab
+  needs: ["setup"]
   variables:
     BUILD_TYPE: "lineage_icosa_sr-userdebug"
     TYPE: "tab"
@@ -72,6 +74,7 @@ icosa-tab:
 icosa-atv:
    extends: .build
    stage: icosa:atv
+   needs: ["icosa-tab"]
    variables:
      BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
      TYPE: "atv"
