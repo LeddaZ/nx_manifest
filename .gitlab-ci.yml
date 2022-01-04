@@ -74,4 +74,4 @@ icosa-atv:
    stage: icosa:atv
    variables:
      BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
-      TYPE: "atv"
+     TYPE: "atv"
