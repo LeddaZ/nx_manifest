@@ -1,10 +1,11 @@
 stages:
-  - dependency_build
+  - prepare
+  - setup
   - build
 
 deploy:
   image: docker:dind
-  stage: dependency_build
+  stage: prepare
   services:
     - name: docker:dind
   script:
@@ -12,33 +13,51 @@ deploy:
     - docker build -t "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}" .
     - docker push "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
 
+setup:
+  image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
+  stage: setup
+  services:
+    - docker:dind
+  variables:
+    LINEAGE_BRANCH: "lineage-17.1"
+    MANIFEST_BRANCH: "lineage-17.1-icosa_sr"
+  script:
+    - mkdir -p /build/android/lineage; cd /build/android/lineage
+    - repo init -u https://github.com/LineageOS/android.git -b "${LINEAGE_BRANCH}"
+    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${MANIFEST_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
+    - .repo/local_manifests/snack/snack.sh -y
+
 .build:
   image: "${CI_REGISTRY_IMAGE}:${CI_COMMIT_BRANCH}"
   stage: build
   services:
     - docker:dind
   variables:
-      BUILD_TYPE: ""
-      LINEAGE_BRANCH: ""
-      MANIFEST_BRANCH: ""
-  script:
-    - mkdir -p /build/android/lineage; cd /build/android/lineage
-    - repo init -u https://github.com/LineageOS/android.git -b "${LINEAGE_BRANCH}"
-    - git clone --recurse-submodules -j8 https://gitlab.com/switchroot/android/manifest.git -b "${MANIFEST_BRANCH}" .repo/local_manifests || echo Manifest already present--snacking now.
-    - .repo/local_manifests/snack/snack.sh -y
+    BUILD_TYPE: ""
+  before_script:
     - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
+  script:
+    - cd /build/android/lineage
     - source build/envsetup.sh
     - lunch "${BUILD_TYPE}"
     - make installclean
     - mka bacon
+
+icosa-tab:
+  extends: .build
+  variables:
+    BUILD_TYPE: "lineage_icosa_sr-userdebug"
+  script:
     - zip -j ${CI_PROJECT_DIR}/icosa-tab-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
   artifacts:
     paths:
       - ${CI_PROJECT_DIR}/icosa-tab-*-dev.zip
-
-icosa-build:
-  extends: .build
-  variables:
-      BUILD_TYPE: "lineage_icosa_sr-userdebug"
-      LINEAGE_BRANCH: "lineage-17.1"
-      MANIFEST_BRANCH: "lineage-17.1-icosa_sr"
+icosa-atv:
+   extends: .build
+   variables:
+     BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
+   script:
+    - zip -j ${CI_PROJECT_DIR}/icosa-atv-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+   artifacts:
+    paths:
+      - ${CI_PROJECT_DIR}/icosa-atv-*-dev.zip
