@@ -15,11 +15,11 @@
 	<project name="CM-Shield/android_device_nvidia_t210-common" path="device/nvidia/t210-common" remote="incom" />
 
 	<!-- Kernel repos -->
-	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu" path="kernel/nvidia/linux-4.9_icosa/kernel/nvgpu" remote="incom" />
-	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/tegra/common" remote="incom" />
-	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/tegra" remote="incom" />
-	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/common" remote="incom" />
-	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/t210" remote="incom" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_kernel_nvgpu" path="kernel/nvidia/linux-4.9_icosa/kernel/nvgpu" remote="incom" revision="lineage-17.1" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/tegra/common" remote="incom" revision="lineage-17.1" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/tegra" remote="incom" revision="lineage-17.1" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/common" remote="incom" revision="lineage-17.1" />
+	<project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/t210" remote="incom" revision="lineage-17.1" />
 
 	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/linux-4.9_icosa/kernel/kernel-4.9" remote="switchroot" revision="lineage-17.1" />
 	<project name="kernel/l4t-kernel-nvidia" path="kernel/nvidia/linux-4.9_icosa/kernel/nvidia" remote="switchroot" revision="lineage-17.1" />
