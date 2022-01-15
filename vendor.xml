@@ -2,4 +2,3 @@
 <manifest>
 	<project name="CM-Shield/proprietary_vendor_nvidia.git" path="vendor/nvidia" remote="incom" />
 </manifest>
-
