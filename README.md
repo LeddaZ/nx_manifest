@@ -1,9 +1,9 @@
-# Switch manifest for LineageOS Redvelvetcake
+# Switch manifest for LineageOS Snowcone
 
 ### Patching
 Basic:
-* Repopick topics `icosa-bt-r`, `nvidia-shieldtech-r`, `nvidia-beyonder-r`, and `nvidia-nvgpu-r` off Lineage Gerrit
-* Repopick commits `308972` and `304329` off Lineage Gerrit
+* Repopick topics `icosa-bt-s`, `nvidia-nvgpu-s`, and `nvidia-enhancements-s` off Lineage Gerrit
+* Repopick commits `321937`, `321110`, and `321938` off Lineage Gerrit
 * Apply all patches to their respective directories (from patches folder)
 
 ### Products

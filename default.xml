@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1" />
-	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1" />
+	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-19.0" />
+	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-19.0" />
 	<remote name="danielo" fetch="https://github.com/DanielOgorchock/" revision="master" />
 
 	<!-- Device repos -->
@@ -31,7 +31,7 @@
 
 	<!-- External repos -->
 	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
-	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
+	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" revision="lineage-18.1" />
 	<project name="joycond" path="hardware/nintendo/joycond" remote="danielo" />
 
 	<!-- Nvidia hardware repos -->
