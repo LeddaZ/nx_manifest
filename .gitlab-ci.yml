@@ -46,14 +46,19 @@ setup:
     BUILD_TYPE: ""
     TYPE: ""
   before_script:
-    - rm out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip || true
+    - rm out/target/product/${PRODUCT}/lineage-1*.1-*-UNOFFICIAL-*.zip || true
   script:
     - cd /build/android/lineage
     - source build/envsetup.sh
     - lunch "${BUILD_TYPE}"
     - make installclean
     - mka bacon
-    - zip -j ${CI_PROJECT_DIR}/icosa-${TYPE}-$(date +'%Y%m%d')-dev.zip out/target/product/icosa_sr/lineage-1*.1-*-UNOFFICIAL-*.zip out/target/product/icosa_sr/boot.img out/target/product/icosa_sr/install/*.dtb
+    - mkdir -p switchroot/android switchroot/install
+    - cp out/target/product/${PRODUCT}/boot.img out/target/product/${PRODUCT}/install/*.dtb switchroot/install/
+    - wget -O switchroot/install/twrp.img https://github.com/makinbacon21/switchroot-android-build/raw/master/external/twrp.img
+    - cp out/target/product/${PRODUCT}/icosa.scr switchroot/android/boot.scr
+    - cp out/target/product/${PRODUCT}/common.scr switchroot/android/
+    - zip -j ${CI_PROJECT_DIR}/icosa-${TYPE}-$(date +'%Y%m%d')-dev.zip out/target/product/${PRODUCT}/lineage-1*.1-*-UNOFFICIAL-*.zip switchroot/android
   artifacts:
     paths:
       - ${CI_PROJECT_DIR}/icosa-${TYPE}-*-dev.zip
@@ -67,6 +72,7 @@ icosa-tab:
   variables:
     BUILD_TYPE: "lineage_icosa_sr-userdebug"
     TYPE: "tab"
+    PRODUCT: "icosa_sr"
 
 #
 # ICOSA TV
@@ -78,3 +84,4 @@ icosa-atv:
    variables:
      BUILD_TYPE: "lineage_icosa_tv_sr-userdebug"
      TYPE: "atv"
+     PRODUCT: "icosa_tv_sr"
