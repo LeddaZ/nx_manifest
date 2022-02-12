@@ -1,4 +1,3 @@
-"device_lineage_atv-res.patch","device/lineage/atv"
 "frameworks_base-beyonder-hack.patch","frameworks/base"
 "frameworks_base-rsmouse-timeout.patch","frameworks/base"
 "hardware_interfaces-audio-mix.patch","hardware/interfaces"
