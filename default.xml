@@ -18,17 +18,6 @@
 	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/tegra" />
 	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_abca" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/abca" />
 	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/common" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_ers" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/ers" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_foster" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/foster" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_fpga" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/fpga"/>
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_hawkeye" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/hawkeye" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_jetson" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/jetson" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_misc" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/misc" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_orca" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/orca" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_porg" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/porg" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_sim" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/sim" />
-	<!-- <project name="CM-Shield/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_smaug" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/smaug" remote="incom" /> -->
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_vcm" path="kernel/nvidia/linux-4.9/hardware/nvidia/platform/t210/vcm" />
 	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/t210" />
 
 	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/linux-4.9_icosa/kernel/kernel-4.9" remote="switchroot"/>
