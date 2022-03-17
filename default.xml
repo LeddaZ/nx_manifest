@@ -44,5 +44,4 @@
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
 	<project name="android/android_vendor_switchroot" path="vendor/switchroot" remote="switchroot" />
-<!--	<project name="makinbacon21/android_vendor_extra" path="vendor/extra" />-->
 </manifest>
