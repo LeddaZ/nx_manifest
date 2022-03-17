@@ -44,15 +44,16 @@
 	<project name="LineageOS/android_external_libevdev" path="external/libevdev" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
 
-	<!-- Nvidia hardware repos -->
+	<!-- Hardware repos -->
 	<project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" />
 	<project name="LineageOS/android_hardware_nvidia_light" path="hardware/nvidia/light" />
 	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" />
 	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" />
 	<project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" />
+	<project name="android/android_hardware_nintendo_sensorservice-icosa" path="hardware/nintendo/sensorservice-icosa" remote="switchroot" />
 
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
 	<project name="android/android_vendor_switchroot" path="vendor/switchroot" remote="switchroot" />
-	<project name="makinbacon21/android_vendor_extra" path="vendor/extra" />
+<!--	<project name="makinbacon21/android_vendor_extra" path="vendor/extra" />-->
 </manifest>
