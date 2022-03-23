@@ -11,7 +11,7 @@
 	<project name="LineageOS/android_device_nvidia_foster_tab" path="device/nvidia/foster_tab" remote="lineage" />
 	<project name="LineageOS/android_device_nvidia_touch" path="device/nvidia/touch" remote="lineage" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" remote="lineage" />
-	<project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" remote="lineage" />
+	<project name="CM-Shield/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" remote="incom" />
 	<project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common" remote="lineage" />
 
 	<!-- Kernel repos -->
