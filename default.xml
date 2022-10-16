@@ -37,6 +37,9 @@
 	<!--<project name="android_hardware_st-mems-android-linux-sensors-hal" path="hardware/STMicroElectronics/SensorHAL_IIO_2_0" remote="bacon" />-->
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
 	<project name="joycond" path="hardware/nintendo/joycond" remote="danielo" />
+	<project name="bootstack/switch-uboot" path="external/switch-uboot" remote="switchroot" revision="linux-hekatf" />
+	<project name="bootstack/switch-atf" path="external/switch-atf" remote="switchroot" revision="switch-hekatfv3-v2.6" />
+	<project name="bootstack/switch-coreboot" path="external/switch-coreboot" remote="switchroot" revision="switch-linux" />
 
 	<!-- Hardware repos -->
 	<project name="CM-Shield/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" remote="incom" />
