@@ -27,7 +27,7 @@
 	<!-- External repos -->
 	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
-	<project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" />
+	<project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" revision="master" />
 
 	<!-- Hardware repos -->
 	<project name="CM-Shield/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" remote="incom" />
