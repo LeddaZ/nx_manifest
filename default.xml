@@ -4,7 +4,7 @@
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1" />
 
 	<!-- Device repos -->
-	<project name="LineageOS/android_device_nintendo_nx" path="device/nintendo/nx" revision="lineage-18.1" />
+	<project name="NX-Development/android_device_nintendo_nx" path="device/nintendo/nx" revision="lineage-18.1" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" />
 	<project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" />
 	<project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common" />
