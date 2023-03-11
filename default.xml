@@ -40,6 +40,6 @@
 	<project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" />
 
 	<!-- Vendor repos -->
-	<project name="LineageOS/proprietary_vendor_nvidia" path="vendor/nvidia" />
+	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
 	<project name="android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="switchroot" />
 </manifest>
