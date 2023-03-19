@@ -5,8 +5,7 @@
 	<remote name="lineage" fetch="https://github.com/" revision="lineage-18.1" />
 
 	<!-- Device repos -->
-	<project name="android/android_device_nintendo_icosa_sr" path="device/nintendo/icosa_sr" remote="switchroot" revision="twrp-11-17.1" />
-	<project name="android/android_device_nintendo_icosa_tv_sr" path="device/nintendo/icosa_tv_sr" remote="switchroot" />
+	<project name="android/android_device_nintendo_nx" path="device/nintendo/nx" remote="switchroot" />
 	<project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common" remote="lineage" />
 	<project name="LineageOS/android_device_nvidia_touch" path="device/nvidia/touch" remote="lineage" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" remote="lineage" />
@@ -14,22 +13,22 @@
 	<project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common" remote="lineage" />
 
 	<!-- Kernel repos -->
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_kernel_nvgpu" path="kernel/nvidia/linux-4.9_icosa/kernel/nvgpu" remote="lineage" revision="lineage-17.1" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/tegra/common" remote="lineage" revision="lineage-17.1" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/tegra" remote="lineage" revision="lineage-17.1" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/common" remote="lineage" revision="lineage-17.1" />
-	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/t210" remote="lineage" revision="lineage-17.1" />
+	<project name="LineageOS/android_kernel_nvidia_linux-4.9_kernel_nvgpu" path="kernel/nvidia/linux-4.9_icosa/kernel/nvgpu" remote="lineage" />
+	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_tegra_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/tegra/common" remote="lineage" />
+	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_tegra" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/tegra" remote="lineage" />
+	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_platform_t210_common" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/common" remote="lineage" />
+	<project name="LineageOS/android_kernel_nvidia_linux-4.9_hardware_nvidia_soc_t210" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/soc/t210" remote="lineage" />
 
-	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/linux-4.9_icosa/kernel/kernel-4.9" remote="switchroot" revision="lineage-17.1" />
-	<project name="kernel/l4t-kernel-nvidia" path="kernel/nvidia/linux-4.9_icosa/kernel/nvidia" remote="switchroot" revision="lineage-17.1" />
-	<project name="kernel/l4t-platform-t210-switch" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/icosa" remote="switchroot" revision="lineage-17.1" />
-
+	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/linux-4.9_icosa/kernel/kernel-4.9" remote="switchroot" />
+	<project name="kernel/l4t-kernel-nvidia" path="kernel/nvidia/linux-4.9_icosa/kernel/nvidia" remote="switchroot" />
+	<project name="kernel/l4t-platform-t210-switch" path="kernel/nvidia/linux-4.9_icosa/hardware/nvidia/platform/t210/icosa" remote="switchroot" />
 
 	<!-- Prebuilt repos -->
 	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" remote="lineage" />
 
 	<!-- External repos -->
 	<project name="LineageOS/android_external_libevdev" path="external/libevdev" remote="lineage" />
+	<project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" revision="android" />
 	<project name="android/android_hardware_STMicroElectronics_SensorHAL_IIO" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
 
 	<!-- Nvidia hardware repos -->

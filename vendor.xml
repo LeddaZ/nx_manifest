@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project name="CM-Shield/proprietary_vendor_nvidia.git" path="vendor/nvidia" remote="incom" />
-	<project name="android/android_vendor_switchroot.git" path="vendor/switchroot" remote="switchroot" />
+	<!-- Vendor repos -->
+	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
+	<project name="android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="switchroot" />
 </manifest>
