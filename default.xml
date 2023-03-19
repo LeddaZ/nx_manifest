@@ -38,6 +38,7 @@
 	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" />
 	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" />
 	<project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" />
+    <project name="android/android_hardware_nintendo_vibrator" path="hardware/nintendo/vibrator" remote="switchroot" />
 
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
