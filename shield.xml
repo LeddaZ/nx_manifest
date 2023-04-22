@@ -37,5 +37,9 @@
 	<project name="LineageOS/android_hardware_nvidia_light" path="hardware/nvidia/light" remote="lineage" />
 	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" remote="lineage" />
 	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" remote="lineage" />
+
+	<!-- Vendor repos -->
+	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" remote="github" revision="lineage-18.1" />
+	<project name="android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="switchroot" />
 	
 </manifest>
