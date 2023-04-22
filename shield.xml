@@ -17,7 +17,7 @@
 	<!-- Kernel repos -->
 	<project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu" remote="lineage" />
 	<project name="LineageOS/android_hardware_nvidia_platform_tegra_common" path="hardware/nvidia/platform/tegra/common" remote="lineage" />
-	<project name="LineageOS/android_hardware_nvidia_soc_tegra" path="hardware/nvidia/soc/tegra" />
+	<project name="LineageOS/android_hardware_nvidia_soc_tegra" path="hardware/nvidia/soc/tegra" remote="lineage" />
 	<project name="LineageOS/android_hardware_nvidia_platform_t210_common" path="hardware/nvidia/platform/t210/common" remote="lineage" />
 	<project name="LineageOS/android_hardware_nvidia_soc_t210" path="hardware/nvidia/soc/t210" remote="lineage" />
 	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/kernel-4.9-nx" remote="switchroot" />
