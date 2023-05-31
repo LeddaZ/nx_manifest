@@ -5,6 +5,12 @@
 	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1" />
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1" />
 
+    <!-- Repos to remove -->
+    <remove-project name="LineageOS/android_art" />
+
+    <!-- ART -->
+    <project name="LeddaZ/android_art" path="art" remote="github" revision="lineage-18.1" />
+    
 	<!-- Device repos -->
 	<project name="LeddaZ/android_device_nintendo_nx" path="device/nintendo/nx" remote="github" revision="lineage-18.1" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" />
