@@ -2,11 +2,16 @@
 <manifest>
 
 	<!-- External remotes -->
+	<remote name="gitlab" fetch="https://gitlab.com/" />
 	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1" />
 	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1" />
 
     <!-- Repos to remove -->
     <remove-project name="LineageOS/android_art" />
+	<remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm" />
+    <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_arm64" />
+    <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86" />
+    <remove-project name="LineageOS/android_external_chromium-webview_prebuilt_x86_64" />
 
     <!-- ART -->
     <project name="LeddaZ/android_art" path="art" remote="github" revision="lineage-18.1" />
@@ -17,6 +22,20 @@
 	<project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" />
 	<project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common" />
     <project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common" />
+
+	<!-- External repos -->
+	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
+	<project name="android/android_hardware_stmicroelectronics_sensorhal_iio" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
+	<project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" revision="android" />
+	<project name="bootstack/switch-atf" path="external/switch-atf" remote="switchroot" revision="switch-v4-atf2.6" />
+	<project name="bootstack/switch-uboot" path="external/switch-uboot" remote="switchroot" revision="android-2022" />
+	<project path="external/chromium-webview/prebuilt" name="LeddaZ/android_external_chromium-webview_prebuilt" remote="gitlab" revision="main" />
+
+	<!-- Hardware repos -->
+	<project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" />
+	<project name="LineageOS/android_hardware_nvidia_light" path="hardware/nvidia/light" />
+	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" />
+	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" />
 
 	<!-- Kernel repos -->
 	<project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu" />
@@ -31,19 +50,6 @@
 
 	<!-- Prebuilt repos -->
 	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" />
-
-	<!-- External repos -->
-	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
-	<project name="android/android_hardware_stmicroelectronics_sensorhal_iio" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot" />
-	<project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" revision="android" />
-	<project name="bootstack/switch-atf" path="external/switch-atf" remote="switchroot" revision="switch-v4-atf2.6" />
-	<project name="bootstack/switch-uboot" path="external/switch-uboot" remote="switchroot" revision="android-2022" />
-
-	<!-- Hardware repos -->
-	<project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces" />
-	<project name="LineageOS/android_hardware_nvidia_light" path="hardware/nvidia/light" />
-	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" />
-	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" />
 
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
