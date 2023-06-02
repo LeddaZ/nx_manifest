@@ -54,5 +54,7 @@
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
 	<project name="android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="switchroot" />
+	<project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="gitlab" revision="rho" clone-depth="1" />
+	<project name="MindTheGapps/vendor_gapps_tv" path="vendor/gapps_tv" remote="gitlab" revision="rho" clone-depth="1" />
 	
 </manifest>
