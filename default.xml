@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1" />
-	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1" />
+	<remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-19.1" />
+	<remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-19.1" />
 
 	<!-- Device repos -->
 	<project name="android/android_device_nintendo_nx" path="device/nintendo/nx" remote="switchroot" />
 	<project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy" />
 	<project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" />
 	<project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common" />
-    <project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common" />
+	<project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common" />
 
 	<!-- Kernel repos -->
-	<project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu" />
+	<!-- keep on 18.1 to continue using r34 instead of r35 -->
+	<project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu" revision="lineage-18.1" />
 	<project name="LineageOS/android_hardware_nvidia_platform_tegra_common" path="hardware/nvidia/platform/tegra/common" />
 	<project name="LineageOS/android_hardware_nvidia_soc_tegra" path="hardware/nvidia/soc/tegra" />
 	<project name="LineageOS/android_hardware_nvidia_platform_t210_common" path="hardware/nvidia/platform/t210/common" />
@@ -19,10 +20,11 @@
 	<project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/kernel-4.9-nx" remote="switchroot" />
 	<project name="kernel/l4t-kernel-nvidia" path="kernel/nvidia/nvidia" remote="switchroot" />
 	<project name="kernel/l4t-platform-t210-switch" path="hardware/nvidia/platform/t210/nx" remote="switchroot" />
-	<project name="LineageOS/android_kernel_nvidia_cypress-fmac-upstream" path="kernel/nvidia/cypress-fmac-upstream" />
+	<!-- only 18.1 is available at the moment -->
+	<project name="LineageOS/android_kernel_nvidia_cypress-fmac-upstream" path="kernel/nvidia/cypress-fmac-upstream" revision="lineage-18.1" />
 
 	<!-- Prebuilt repos -->
-	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" />
+	<project name="CM-Shield/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-9.3.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-9.3" remote="incom" revision="lineage-20.0" />
 
 	<!-- External repos -->
 	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
@@ -38,7 +40,6 @@
 	<project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power" />
 	<project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal" />
 	<!--<project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" />-->
-    <!--<project name="android/android_hardware_nintendo_vibrator" path="hardware/nintendo/vibrator" remote="switchroot" />-->
 
 	<!-- Vendor repos -->
 	<project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia" />
