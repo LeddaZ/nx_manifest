@@ -24,7 +24,8 @@
 	<project name="LineageOS/android_kernel_nvidia_cypress-fmac-upstream" path="kernel/nvidia/cypress-fmac-upstream" revision="lineage-18.1" />
 
 	<!-- Prebuilt repos -->
-	<project name="CM-Shield/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-9.3.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-9.3" remote="incom" revision="lineage-20.0" />
+	<!--<project name="CM-Shield/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-9.3.git" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-9.3" remote="incom" revision="lineage-20.0" />-->
+	<project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1" revision="lineage-18.1" />
 
 	<!-- External repos -->
 	<project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom" />
