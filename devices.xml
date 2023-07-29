@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!-- Remotes -->
- <remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1"/>
+ <remote name="gl-incom-ssh" fetch="ssh://git@gitlab.incom.co:22/" revision="lineage-18.1"/>
+ <remote name="gl-incom-ssh" fetch="https://gitlab.incom.co/" revision="lineage-18.1"/>
  <remote name="gl-ssh" fetch="ssh://git@gitlab.com:22/" revision="lineage-18.1"/>
 
 <!-- Devices -->
@@ -22,7 +23,7 @@
   <project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu"/>
 
 <!-- External -->
-  <project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom"/>
+  <project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="gl-incom-ssh"/>
   <!--project name="android/android_hardware_st-mems-android-linux-sensors-hal" path="hardware/st/sensors-hal" remote="gl-ssh" /-->
   <project name="switchroot/android/android_hardware_stmicroelectronics_sensorhal_iio" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="gl-ssh"/>
   <project name="switchroot/userspace/joycond" path="hardware/nintendo/joycond" remote="gl-ssh" revision="android"/>
@@ -43,5 +44,4 @@
 <!-- Vendor -->
   <project name="switchroot/android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="gl-ssh"/>
   <project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia"/>
-  <project name="switchroot/android/android_vendor_switchroot" path="vendor/nvidia" remote="gl-ssh"/>
  </manifest>
