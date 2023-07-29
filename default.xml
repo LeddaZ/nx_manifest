@@ -2,46 +2,46 @@
 <manifest>
 <!-- Remotes -->
  <remote name="incom" fetch="https://gitlab.incom.co/" revision="lineage-18.1"/>
- <remote name="switchroot" fetch="https://gitlab.com/switchroot/" revision="lineage-18.1"/>
+ <remote name="gl-ssh" fetch="ssh://git@gitlab.com:22/" revision="lineage-18.1"/>
 
 <!-- Devices -->
  <!-- nx -->
-  <project name="android/android_device_nintendo_nx" path="device/nintendo/nx" remote="switchroot"/>
+  <project name="switchroot/android/android_device_nintendo_nx" path="device/nintendo/nx" remote="gl-ssh"/>
   <project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common"/>
   <project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common"/>
   <project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy"/>
   <project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common"/>
-  <project name="kernel/l4t-platform-t210-switch" path="hardware/nvidia/platform/t210/nx" remote="switchroot"/>
+  <project name="switchroot/kernel/l4t-platform-t210-switch" path="hardware/nvidia/platform/t210/nx" remote="gl-ssh"/>
   <project name="LineageOS/android_hardware_nvidia_platform_tegra_common" path="hardware/nvidia/platform/tegra/common"/>
   <project name="LineageOS/android_hardware_nvidia_platform_t210_common" path="hardware/nvidia/platform/t210/common"/>
   <project name="LineageOS/android_hardware_nvidia_soc_t210" path="hardware/nvidia/soc/t210"/>
   <project name="LineageOS/android_hardware_nvidia_soc_tegra" path="hardware/nvidia/soc/tegra"/>
-  <project name="kernel/l4t-kernel-4.9" path="kernel/nvidia/kernel-4.9-nx" remote="switchroot"/>
-  <project name="kernel/l4t-kernel-nvidia" path="kernel/nvidia/nvidia" remote="switchroot"/>
+  <project name="switchroot/kernel/l4t-kernel-4.9" path="kernel/nvidia/kernel-4.9-nx" remote="gl-ssh"/>
+  <project name="switchroot/kernel/l4t-kernel-nvidia" path="kernel/nvidia/nvidia" remote="gl-ssh"/>
   <project name="LineageOS/android_kernel_nvidia_cypress-fmac-upstream" path="kernel/nvidia/cypress-fmac-upstream"/>
   <project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu"/>
 
 <!-- External -->
   <project name="CM-Shield/android_external_libevdev" path="external/libevdev" remote="incom"/>
-  <!--project name="android/android_hardware_st-mems-android-linux-sensors-hal" path="hardware/st/sensors-hal" remote="switchroot" /-->
-  <project name="android/android_hardware_stmicroelectronics_sensorhal_iio" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="switchroot"/>
-  <project name="userspace/joycond" path="hardware/nintendo/joycond" remote="switchroot" revision="android"/>
-  <project name="bootstack/switch-atf" path="external/switch-atf" remote="switchroot" revision="switch-v4-atf2.6"/>
-  <project name="bootstack/switch-uboot" path="external/switch-uboot" remote="switchroot" revision="android-2022"/>
+  <!--project name="android/android_hardware_st-mems-android-linux-sensors-hal" path="hardware/st/sensors-hal" remote="gl-ssh" /-->
+  <project name="switchroot/android/android_hardware_stmicroelectronics_sensorhal_iio" path="hardware/STMicroElectronics/SensorHAL_IIO" remote="gl-ssh"/>
+  <project name="switchroot/userspace/joycond" path="hardware/nintendo/joycond" remote="gl-ssh" revision="android"/>
+  <project name="switchroot/bootstack/switch-atf" path="external/switch-atf" remote="gl-ssh" revision="switch-v4-atf2.6"/>
+  <project name="switchroot/bootstack/switch-uboot" path="external/switch-uboot" remote="gl-ssh" revision="android-2022"/>
 
 <!-- Hardware -->
   <project name="LineageOS/android_hardware_nvidia_interfaces" path="hardware/nvidia/interfaces"/>
   <project name="LineageOS/android_hardware_nvidia_light" path="hardware/nvidia/light"/>
   <project name="LineageOS/android_hardware_nvidia_power" path="hardware/nvidia/power"/>
   <project name="LineageOS/android_hardware_nvidia_thermal" path="hardware/nvidia/thermal"/>
-  <!--project name="android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="switchroot" /-->
-  <!--project name="android/android_hardware_nintendo_vibrator" path="hardware/nintendo/vibrator" remote="switchroot" /-->
+  <!--project name="switchroot/android/android_hardware_nvidia_input_hook" path="hardware/nvidia/input_hook" remote="gl-ssh" /-->
+  <!--project name="switchroot/android/android_hardware_nintendo_vibrator" path="hardware/nintendo/vibrator" remote="gl-ssh" /-->
 
 <!-- Prebuilts -->
   <project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-gnu-6.4.1" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-gnu-6.4.1"/>
 
 <!-- Vendor -->
-  <project name="android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="switchroot"/>
+  <project name="switchroot/android/proprietary_vendor_nintendo" path="vendor/nintendo" remote="gl-ssh"/>
   <project name="TheMuppets/proprietary_vendor_nvidia" path="vendor/nvidia"/>
-  <project name="android/android_vendor_switchroot" path="vendor/nvidia" remote="switchroot"/>
+  <project name="switchroot/android/android_vendor_switchroot" path="vendor/nvidia" remote="gl-ssh"/>
  </manifest>
