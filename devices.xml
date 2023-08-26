@@ -19,6 +19,8 @@
   <project name="switchroot/kernel/l4t-kernel-4.9" path="kernel/nvidia/kernel-4.9-nx" remote="gl"/>
   <project name="switchroot/kernel/l4t-kernel-nvidia" path="kernel/nvidia/nvidia" remote="gl"/>
   <project name="LineageOS/android_kernel_nvidia_cypress-fmac-upstream" path="kernel/nvidia/cypress-fmac-upstream" revision="lineage-18.1" />
+  <project name="LineageOS/android_kernel_nvidia_wireguard" path="kernel/nvidia/wireguard"/>
+  <project name="LineageOS/android_kernel_nvidia_nvethernetrm" path="kernel/nvidia/nvidia/drivers/net/ethernet/nvidia/nvethernet/nvethernetrm"/>
   <project name="LineageOS/android_kernel_nvidia_nvgpu" path="kernel/nvidia/nvgpu"/>
 
 <!-- External -->
