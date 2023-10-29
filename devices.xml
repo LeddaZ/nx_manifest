@@ -8,7 +8,7 @@
 
   <!-- Devices -->
   <project name="android_device_nintendo_nx" path="device/nintendo/nx" remote="leddaz"/>
-  <project name="android_device_nvidia_tegra-common" path="device/nvidia/tegra-common" remote="leddaz"/>
+  <project name="LineageOS/android_device_nvidia_tegra-common" path="device/nvidia/tegra-common"/>
   <project name="LineageOS/android_device_nvidia_t210-common" path="device/nvidia/t210-common"/>
   <project name="LineageOS/android_device_nvidia_sepolicy" path="device/nvidia/sepolicy"/>
   <project name="LineageOS/android_device_nvidia_shield-common" path="device/nvidia/shield-common"/>
